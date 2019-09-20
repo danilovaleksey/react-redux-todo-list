@@ -1,0 +1,73 @@
+@import '../../../variables.scss';
+
+
+
+.list {
+  width: 100%;
+  background-color: $lightPurple;
+  border: 1px solid $purple;
+  border-bottom: none;
+  border-radius: 5px;
+  color: $purple;
+  .item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid $purple;
+    &:last-child {
+      border-radius: 5px;
+    }
+    &:nth-child(2) {
+      background-color: $lightPurpleNth;
+    }
+
+    .data {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: relative;
+      .lineThrough {
+        color: $grey;
+      }
+      .lineThrough:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        color: $grey;
+        width: 100%;
+        height: 0;
+        border-bottom: 2px solid $grey;
+
+      }
+      .positionAndName {
+        display: flex;
+        .name {
+          margin-left: 5px;
+        }
+      }
+    }
+    .squares {
+      display: flex;
+
+      .square {
+        width: 20px;
+        height: 20px;
+        background-color: $purple;
+        font-size: 14px;
+        text-align: center;
+        color: white;
+        margin-left: 10px;
+        cursor: default;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+  }
+}
+.colorForSelectItem {
+  background-color: #37085e !important ;
+}
+

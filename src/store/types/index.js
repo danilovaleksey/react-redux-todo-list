@@ -1,1 +1,3 @@
-export const TEST = 'TEST';
+export const CHANGE_TODO_NAME = 'CHANGE_TODO_NAME';
+export const ADD_TODO = 'ADD_TODO';
+export const CHANGE_ACTIVE_TODO = 'CHANGE_ACTIVE_TODO';

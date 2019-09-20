@@ -1,0 +1,13 @@
+@import "../../../variables";
+
+.previewSide {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid $purple;
+  border-radius: 5px;
+  color: $purple;
+
+}
