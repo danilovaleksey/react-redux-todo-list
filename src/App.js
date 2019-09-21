@@ -15,13 +15,20 @@ import TodoList from "./components/TodoList/TodoList";
 import Footer from "./components/Footer/Footer";
 
 
-
 class App extends React.Component {
   static propTypes = {
     items: PropTypes.array,
+    todoName: PropTypes.string,
+    changeTodoName: PropTypes.func,
+    addTodo: PropTypes.func,
+    changeActiveTodo: PropTypes.func,
   };
   static defaultProps = {
     items: [],
+    todoName: '',
+    changeTodoName: ()=>{},
+    addTodo: ()=>{},
+    changeActiveTodo: ()=>{},
   };
   render() {
     const {

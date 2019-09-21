@@ -1,7 +1,8 @@
 import React from 'react';
 import s from './AddTodo.module.scss';
+import PropTypes from "prop-types";
 
-function AddTodo(props) {
+function AddTodo (props) {
   const {
     name,
     changeTodoName,
@@ -17,13 +18,31 @@ function AddTodo(props) {
             onChange={(e) => {
               changeTodoName(e.target.value);
             }}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') {
+                addTodo(e.target.value);
+              }
+            }}
         />
         <button
             className={s.buttonAddTodo}
             onClick={() => {addTodo();}}
-        >Add Todo</button>
+        >
+          Add Todo
+        </button>
       </div>
   );
 }
+
+AddTodo.propTypes = {
+  name: PropTypes.string,
+  changeTodoName: PropTypes.func,
+  addTodo: PropTypes.func,
+};
+AddTodo.defaultProps = {
+  name: '',
+  changeTodoName: ()=>{},
+  addTodo: () =>{},
+};
 
 export default AddTodo;

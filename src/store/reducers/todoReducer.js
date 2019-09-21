@@ -12,24 +12,7 @@ export const initialState = {
         isActive: true,
     },
     items: [
-        {
-            id: 1,
-            name: 'First Todo Item',
-            author: 'Petrov P.P.',
-            isActive: true
-        },
-        {
-            id: 2,
-            name: 'Second Todo Item',
-            author: 'Sidorov S.S.',
-            isActive: false
-        },
-        {
-            id: 3,
-            name: 'Second Todo Item',
-            author: 'Sidorov S.S.',
-            isActive: false
-        }
+
     ]
 };
 
@@ -71,8 +54,7 @@ export default function Todo (state = initialState, action) {
             }
         }
         case CHANGE_ACTIVE_TODO: {
-            console.log(action.id);
-            const newState = state.items.map((item) => {
+            let newState = state.items.map((item) => {
                 if (item.id === action.id) {
                     item.isActive = !item.isActive
                 }

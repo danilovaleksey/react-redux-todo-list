@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import s from './TodoList.module.scss';
+
 import List from "./ui/List/List";
 import Preview from "./ui/Preview/Preview";
 
@@ -13,9 +14,11 @@ class TodoList extends React.Component {
   };
   static propTypes = {
     items: PropTypes.array,
+    changeActiveTodo: PropTypes.func,
   };
   static defaultProps = {
     items: [],
+    changeActiveTodo: ()=>{},
   };
   onPreviewChange = ( data, key ) => {
     const { itemData, activePreview} = this.state;
