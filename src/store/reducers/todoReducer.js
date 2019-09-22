@@ -12,7 +12,24 @@ export const initialState = {
         isActive: true,
     },
     items: [
-
+        {
+            id: 1,
+            name: 'First Todo Item',
+            author: 'Petrov P.P.',
+            isActive: true
+        },
+        {
+            id: 2,
+            name: 'Second Todo Item',
+            author: 'Sidorov S.S.',
+            isActive: false
+        },
+        {
+            id: 3,
+            name: 'Third Todo Item',
+            author: 'Sidorov S.S.',
+            isActive: false
+        }
     ]
 };
 

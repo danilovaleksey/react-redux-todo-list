@@ -20,6 +20,7 @@ class TodoList extends React.Component {
     items: [],
     changeActiveTodo: ()=>{},
   };
+
   onPreviewChange = ( data, key ) => {
     const { itemData, activePreview} = this.state;
 
@@ -52,8 +53,8 @@ class TodoList extends React.Component {
         });
       }
     }
-
   };
+
   render() {
     const { items, changeActiveTodo } = this.props;
     const { itemData, activePreview, key } = this.state;

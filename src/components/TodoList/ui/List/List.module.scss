@@ -7,11 +7,13 @@
   border-bottom: none;
   border-radius: 5px;
   color: $purple;
+
   .item {
     display: flex;
     justify-content: space-between;
     padding: 10px;
     border-bottom: 1px solid $purple;
+    height: 20px;
     &:last-child {
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
@@ -25,30 +27,39 @@
       justify-content: space-between;
       width: 100%;
       position: relative;
-      .lineThrough {
-        color: $grey;
-      }
-      .lineThrough:after {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        color: $grey;
-        width: 100%;
-        height: 0;
-        border-bottom: 2px solid $grey;
-      }
+      border-bottom: 1px solid transparent;
       .positionAndName {
         display: flex;
+        width: 50%;
         .name {
           margin-left: 5px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .author {
+          white-space: nowrap;
+          overflow: hidden;
         }
       }
     }
+    .lineThrough {
+      color: $grey;
+    }
+    .lineThrough:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 0;
+      border-bottom: 1px solid $grey;
+    }
+
     .squares {
       display: flex;
-
+      flex-wrap: nowrap;
       .square {
         width: 20px;
         height: 20px;

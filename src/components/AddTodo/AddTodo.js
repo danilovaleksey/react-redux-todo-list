@@ -15,9 +15,7 @@ function AddTodo (props) {
             className={s.inputText}
             placeholder={'Type...'}
             value={name}
-            onChange={(e) => {
-              changeTodoName(e.target.value);
-            }}
+            onChange={(e) => {changeTodoName(e.target.value)}}
             onKeyPress={(e) => {
               if (e.key === 'Enter') {
                 addTodo(e.target.value);
@@ -26,7 +24,7 @@ function AddTodo (props) {
         />
         <button
             className={s.buttonAddTodo}
-            onClick={() => {addTodo();}}
+            onClick={() => {addTodo()}}
         >
           Add Todo
         </button>
